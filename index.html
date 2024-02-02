@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buziak dla Domki</title>
+    <style>
+        body {
+            background-image: url('serduszka.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #0099cc; /* Kolor tekstu błękitny */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1, h2, p, button {
+            margin: 20px; /* Dla lepszej estetyki i odstępów */
+        }
+
+        h2 {
+            font-size: 32px; /* Zwiększenie rozmiaru czcionki dla "Czy zostaniesz moją walentynką?" */
+        }
+
+        p, #message {
+            font-size: 26px; /* Zwiększenie rozmiaru czcionki dla odpowiedzi */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hej piękna</h1>
+    <h2>Mam nadzieję, że nie przeszkadzam, ale mam pytanie...</h2>
+    <p>Czy zostaniesz moją walentynką?</p>
+
+    <img src="tobi.jpg" alt="Tobi">
+
+    <form id="myForm">
+        <button type="button" onclick="showMessage('Tak')">Tak</button>
+        <button type="button" onclick="showMessage('Nie')">Nie</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function showMessage(choice) {
+            var messageElement = document.getElementById('message');
+            if (choice === 'Tak') {
+                messageElement.textContent = 'Widzimy się 14 lutego, śliczna!';
+            } else {
+                messageElement.textContent = 'Proszę, tak nie robić , bo Błażej będzie smutny.';
+            }
+        }
+    </script>
+
+</body>
+</html>
